@@ -89,11 +89,15 @@ class TestLogger extends AbstractLogger {
 	}
 
 	public function hasRecordThatContains($message, $level) {
-		return $this->hasRecordThatPasses(fn ($rec) => strpos($rec['message'], (string) $message) !== false, $level);
+		return $this->hasRecordThatPasses(function ($rec) use ($message) {
+			return strpos($rec['message'], (string) $message) !== false;
+		}, $level);
 	}
 
 	public function hasRecordThatMatches($regex, $level) {
-		return $this->hasRecordThatPasses(fn ($rec) => preg_match($regex, $rec['message']) > 0, $level);
+		return $this->hasRecordThatPasses(function ($rec) use ($regex) {
+			return preg_match($regex, $rec['message']) > 0;
+		}, $level);
 	}
 
 	public function hasRecordThatPasses(callable $predicate, $level) {
