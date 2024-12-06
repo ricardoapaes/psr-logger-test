@@ -1,15 +1,7 @@
-# [Nome da Biblioteca] Descrição da biblioteca [![CI](https://github.com/likesistemas/composer-empty/actions/workflows/ci.yml/badge.svg)](https://github.com/likesistemas/composer-empty/actions/workflows/ci.yml)
+# [psr-logger-test] A PSR-3 logger test implementation. [![CI](https://github.com/ricardoapaes/psr-logger-test/actions/workflows/ci.yml/badge.svg)](https://github.com/ricardoapaes/psr-logger-test/actions/workflows/ci.yml)
 
-## Instalação
+## Install
 
 ```
-composer require likesistemas/nomedalib
-```
-
-## Como usar?
-
-Descrição de como usar.
-
-```yml
-$intancia = new NomeDaLib();
+composer require ricardoapaes/psr-logger-test
 ```
