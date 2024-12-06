@@ -8,8 +8,6 @@ services:
 
   php:
     image: likesistemas/php-dev:${PHP_VERSION:-56}
-    environment:
-      - GITHUB_TOKEN=$GITHUB_TOKEN
     volumes:
       - ./:/var/www/public/
     networks:
